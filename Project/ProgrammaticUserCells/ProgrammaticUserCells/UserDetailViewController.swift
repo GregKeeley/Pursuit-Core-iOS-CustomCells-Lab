@@ -21,19 +21,28 @@ class UserDetailViewController: UIViewController {
         detailView.backgroundColor = .darkGray
         loadUserData()
     }
+
     private func loadUserData() {
-        detailView.nameLabel.text = ("\(user?.name.title)\(user?.name.first)\(user?.name.last)")
-        detailView.ageLabel.text = ("DOB: \(user?.dob.date)Age: \(user?.dob.age)")
-        detailView.emailLabel.text = ("Email Address:\(user?.email)")
-        detailView.locationLabel.text = ("PLACEHOLDER")
-        detailView.phoneNumberLabel.text = ("\(user?.phone)")
-        detailView.userNameLabel.text = ("Username: \(user?.login.username)")
+        
+        let originalDOB = user?.dob.date
+        
+        
+        detailView.nameLabel.text = ("\(user?.name.title ?? "")\(user?.name.first ?? "First name")\(user?.name.last ?? "Last name")")
+        detailView.ageLabel.text = ("DOB: \(user?.dob.date ?? "N/A")Age: \(user?.dob.age ?? 666)")
+        detailView.emailLabel.text = ("Email Address:\(user?.email ?? "N/A")")
+        detailView.locationLabel.text = ("""
+            \(user?.location.street.number ?? 123) \(user?.location.street.name ?? "Sesame Street")
+            \(user?.location.city ?? "N/A"), \(user?.location.state ?? "N/A")
+            \(user?.location.postcode ?? "N/A")
+            """)
+        detailView.phoneNumberLabel.text = ("Phone: \(user?.phone ?? "N/A")")
+        detailView.userNameLabel.text = ("Username: \(user?.login.username ?? "N/A")")
         detailView.userImageView.getImage(with: (user?.picture.large)!) { (results) in
             switch results {
             case .failure(let appError):
                 DispatchQueue.main.async {
                     print(appError)
-                self.detailView.userImageView.image = UIImage(named: "person.fill")
+                    self.detailView.userImageView.image = UIImage(named: "person.fill")
                 }
             case .success(let imageData):
                 DispatchQueue.main.async {
@@ -42,5 +51,5 @@ class UserDetailViewController: UIViewController {
             }
         }
     }
-
+    
 }

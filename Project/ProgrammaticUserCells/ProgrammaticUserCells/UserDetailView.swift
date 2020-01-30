@@ -9,7 +9,7 @@
 import UIKit
 
 class UserDetailView: UIView {
-    
+
     public lazy var userImageView: UIImageView = {
         let imageView = UIImageView()
         return imageView
@@ -48,13 +48,24 @@ class UserDetailView: UIView {
         commonInit()
     }
     private func commonInit() {
+        /*
+         userImageView
+         nameLabel
+         userNameLabel
+         locationLabel
+         phoneNumberLabel
+         emilLabel
+         agaLabel
+         */
         setupUserImageConstraints()
         setupNameLabelConstraints()
         setupUserNameLabelConstraints()
-//        setupEmailConstraints()
-//        setupAgeLabelConstraints()
-//        setupLocationLabelConstraints()
-//        setupPhoneNumberLabelConstraints()
+        setupLocationLabelConstraints()
+        setupPhoneNumberLabelConstraints()
+        setupEmailConstraints()
+        setupAgeLabelConstraints()
+        
+        
     }
     private func setupUserImageConstraints() {
         addSubview(userImageView)
@@ -62,8 +73,8 @@ class UserDetailView: UIView {
         NSLayoutConstraint.activate([
         
             userImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
-            userImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 0),
-            userImageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 0),
+            userImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
+            userImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
             userImageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.4)
             
         ])
@@ -71,11 +82,12 @@ class UserDetailView: UIView {
     //nameLabel
     private func setupNameLabelConstraints() {
         addSubview(nameLabel)
-        userNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
         
             nameLabel.topAnchor.constraint(equalTo: userImageView.bottomAnchor, constant: 20),
-            nameLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         
         ])
     }
@@ -91,47 +103,47 @@ class UserDetailView: UIView {
         ])
     }
 //    //locationLabel
-//    private func setupLocationLabelConstraints() {
-//        addSubview(locationLabel)
-//        locationLabel.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//
-//            locationLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 10),
-//            locationLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20)
-//
-//        ])
-//    }
-//    //phoneNumberLabel
-//    private func setupPhoneNumberLabelConstraints() {
-//        addSubview(phoneNumberLabel)
-//        phoneNumberLabel.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//
-//            phoneNumberLabel.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: 10),
-//            phoneNumberLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20)
-//
-//        ])
-//    }
-//    //emailLabel
-//    private func setupEmailConstraints() {
-//        addSubview(emailLabel)
-//        emailLabel.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//
-//            emailLabel.topAnchor.constraint(equalTo: phoneNumberLabel.bottomAnchor, constant: 10),
-//            emailLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20)
-//
-//        ])
-//    }
-//    //ageLabel
-//    private func setupAgeLabelConstraints() {
-//        addSubview(ageLabel)
-//        ageLabel.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//
-//            ageLabel.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 10),
-//            ageLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20)
-//
-//        ])
-//    }
+    private func setupLocationLabelConstraints() {
+        addSubview(locationLabel)
+        locationLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+
+            locationLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 10),
+            locationLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20)
+
+        ])
+    }
+    //phoneNumberLabel
+    private func setupPhoneNumberLabelConstraints() {
+        addSubview(phoneNumberLabel)
+        phoneNumberLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+
+            phoneNumberLabel.topAnchor.constraint(equalTo: locationLabel.bottomAnchor, constant: 10),
+            phoneNumberLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20)
+
+        ])
+    }
+    //emailLabel
+    private func setupEmailConstraints() {
+        addSubview(emailLabel)
+        emailLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+
+            emailLabel.topAnchor.constraint(equalTo: phoneNumberLabel.bottomAnchor, constant: 10),
+            emailLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20)
+
+        ])
+    }
+    //ageLabel
+    private func setupAgeLabelConstraints() {
+        addSubview(ageLabel)
+        ageLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+
+            ageLabel.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 10),
+            ageLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20)
+
+        ])
+    }
 }
