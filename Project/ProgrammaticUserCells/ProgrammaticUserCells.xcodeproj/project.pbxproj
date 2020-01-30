@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		C121958C23E2FA09000AC6B1 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C121958B23E2FA09000AC6B1 /* UserCell.xib */; };
 		C121958E23E304C9000AC6B1 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121958D23E304C9000AC6B1 /* UserDetailView.swift */; };
 		C121959023E304DC000AC6B1 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121958F23E304DC000AC6B1 /* UserDetailViewController.swift */; };
+		C121959323E308E2000AC6B1 /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = C121959223E308E2000AC6B1 /* ImageKit */; };
 		CDA0F5CE2348F74900B2E7F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5CD2348F74900B2E7F0 /* AppDelegate.swift */; };
 		CDA0F5D02348F74900B2E7F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5CF2348F74900B2E7F0 /* SceneDelegate.swift */; };
 		CDA0F5D22348F74900B2E7F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA0F5D12348F74900B2E7F0 /* ViewController.swift */; };
@@ -64,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C121959323E308E2000AC6B1 /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +153,9 @@
 			dependencies = (
 			);
 			name = ProgrammaticUserCells;
+			packageProductDependencies = (
+				C121959223E308E2000AC6B1 /* ImageKit */,
+			);
 			productName = ProgrammaticUserCells;
 			productReference = CDA0F5CA2348F74900B2E7F0 /* ProgrammaticUserCells.app */;
 			productType = "com.apple.product-type.application";
@@ -201,6 +206,9 @@
 				Base,
 			);
 			mainGroup = CDA0F5C12348F74900B2E7F0;
+			packageReferences = (
+				C121959123E308E2000AC6B1 /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = CDA0F5CB2348F74900B2E7F0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -507,6 +515,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C121959123E308E2000AC6B1 /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C121959223E308E2000AC6B1 /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C121959123E308E2000AC6B1 /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CDA0F5C22348F74900B2E7F0 /* Project object */;
 }

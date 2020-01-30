@@ -58,7 +58,7 @@ class UserDetailView: UIView {
             userImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0),
             userImageView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 0),
             userImageView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            userImageView.heightAnchor.constraint(equalTo: safeAreaLayoutGuide.heightAnchor, constant: 0.40)
+            userImageView.heightAnchor.constraint(equalTo: heightAnchor, constant: 0.40)
             
         ])
     }

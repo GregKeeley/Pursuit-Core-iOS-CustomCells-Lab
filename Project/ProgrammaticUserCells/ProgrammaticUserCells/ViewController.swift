@@ -1,4 +1,5 @@
 import UIKit
+import ImageKit
 
 class ViewController: UIViewController {
 
@@ -51,6 +52,21 @@ extension ViewController: UICollectionViewDataSource {
         cell.titleAndNameLabel.text = ("\(user.name.title) \(user.name.first) \(user.name.last)")
         cell.ageLabel.text = ("Age: \(user.dob.age.description)")
         cell.cityAndStateLabel.text = ("\(user.location.city), \(user.location.state)")
+        cell.userImage.getImage(with: user.picture.medium) { (results) in
+            switch results {
+            case .failure(let appError):
+                print(appError)
+                DispatchQueue.main.async {
+                cell.userImage.image = UIImage(named: "person.fill")
+                }
+            case .success(let imageData):
+                DispatchQueue.main.async {
+                cell.userImage.image = imageData
+                cell.userImage.layer.cornerRadius = 20
+                }
+            }
+            
+        }
         return cell
     }
     

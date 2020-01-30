@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VG-gl-brN">
-                        <rect key="frame" x="20" y="20" width="258" height="21"/>
+                        <rect key="frame" x="20" y="20" width="250" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8u-lH-Xna">
-                        <rect key="frame" x="20" y="49" width="258" height="21"/>
+                        <rect key="frame" x="20" y="49" width="250" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -37,15 +37,15 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aGG-aU-PSK">
-                        <rect key="frame" x="286" y="0.5" width="150" height="149"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aGG-aU-PSK">
+                        <rect key="frame" x="278" y="8.5" width="150" height="150"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="N9G-Ng-TsT"/>
-                            <constraint firstAttribute="height" constant="150" id="lTd-bO-NOs"/>
+                            <constraint firstAttribute="height" constant="151" id="lTd-bO-NOs"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn8-aO-G4u">
-                        <rect key="frame" x="20" y="107" width="258" height="20.5"/>
+                        <rect key="frame" x="20" y="107" width="250" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -58,14 +58,14 @@
                     <constraint firstItem="7VG-gl-brN" firstAttribute="leading" secondItem="8pK-u6-OZn" secondAttribute="leading" constant="20" id="BIt-WE-hYA"/>
                     <constraint firstItem="b8u-lH-Xna" firstAttribute="leading" secondItem="8pK-u6-OZn" secondAttribute="leading" constant="20" id="DpC-OD-LFC"/>
                     <constraint firstItem="Y1O-WU-pD3" firstAttribute="top" secondItem="b8u-lH-Xna" secondAttribute="bottom" constant="8" id="Fjy-iA-XHR"/>
-                    <constraint firstItem="aGG-aU-PSK" firstAttribute="top" secondItem="8pK-u6-OZn" secondAttribute="top" constant="0.01" id="LHT-yG-bDl"/>
+                    <constraint firstItem="aGG-aU-PSK" firstAttribute="top" secondItem="8pK-u6-OZn" secondAttribute="top" constant="8" id="LHT-yG-bDl"/>
                     <constraint firstItem="aGG-aU-PSK" firstAttribute="leading" secondItem="yn8-aO-G4u" secondAttribute="trailing" constant="8" id="LMm-jf-E7z"/>
                     <constraint firstItem="yn8-aO-G4u" firstAttribute="leading" secondItem="8pK-u6-OZn" secondAttribute="leading" constant="20" id="Le6-X3-WC9"/>
-                    <constraint firstAttribute="bottom" secondItem="aGG-aU-PSK" secondAttribute="bottom" constant="0.01" id="O6j-xr-lmG"/>
+                    <constraint firstAttribute="bottom" secondItem="aGG-aU-PSK" secondAttribute="bottom" constant="8" id="O6j-xr-lmG"/>
                     <constraint firstItem="aGG-aU-PSK" firstAttribute="leading" secondItem="7VG-gl-brN" secondAttribute="trailing" constant="8" id="byT-Qn-mrG"/>
                     <constraint firstItem="aGG-aU-PSK" firstAttribute="leading" secondItem="b8u-lH-Xna" secondAttribute="trailing" constant="8" id="dJe-1f-HTO"/>
                     <constraint firstItem="yn8-aO-G4u" firstAttribute="top" secondItem="Y1O-WU-pD3" secondAttribute="bottom" constant="8" id="pUR-ZT-55T"/>
-                    <constraint firstAttribute="trailing" secondItem="aGG-aU-PSK" secondAttribute="trailing" constant="0.01" id="sPT-bd-gTs"/>
+                    <constraint firstAttribute="trailing" secondItem="aGG-aU-PSK" secondAttribute="trailing" constant="8" id="sPT-bd-gTs"/>
                     <constraint firstItem="Y1O-WU-pD3" firstAttribute="leading" secondItem="8pK-u6-OZn" secondAttribute="leading" constant="20" id="tWF-eY-dXg"/>
                 </constraints>
             </collectionViewCellContentView>
