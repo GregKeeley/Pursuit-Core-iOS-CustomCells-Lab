@@ -9,6 +9,7 @@ struct User: Codable {
     let name: Name
     let location: Location
     let email: String
+    let login: LoginInfo
     let dob: BirthdayInfo
     let phone: String
     let cell: String
@@ -24,7 +25,9 @@ struct User: Codable {
         }
     }
 }
-
+struct LoginInfo: Codable {
+    let username: String
+}
 struct Name: Codable {
     let title: String
     let first: String
