@@ -63,6 +63,9 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: itemWidth, height: itemWidth / 3)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let user = randomUsers[indexPath.row]
+        let userDetailVC = UserDetailViewController()
+        userDetailVC.user = user
+        navigationController?.pushViewController(userDetailVC, animated: true)
     }
 }
